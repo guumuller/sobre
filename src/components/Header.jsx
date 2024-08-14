@@ -9,7 +9,7 @@ function Header() {
           </div>
         </div>
         <div className="h-32 w-32 rounded-full full-center">
-          <img src="../../images/avatar.jpeg" className="rounded-full"></img>
+          <img src="/avatar.jpeg" className="rounded-full"></img>
         </div>
       </header>
     )

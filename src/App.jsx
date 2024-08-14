@@ -13,8 +13,8 @@ function App() {
       <main className="max-w-3xl mx-auto py-8 flex flex-col gap-8">
         <Header />
         <div className="flex flex-row-reverse items-center gap-4">
-          <a href="https://github.com/guumuller" target="_blank"><button className="bg-[#516264] hover:bg-[#404e50] px-2 py-2 mt-1 rounded-lg border-solid border-2 border-[#bdd5d9]"><img src="../images/github.png" className="w-6"></img></button></a>
-          <a href="https://www.linkedin.com/in/gustavo-m%C3%BCller-leonini-machado-aaa542264/" target="_blank"><button className="bg-[#516264] hover:bg-[#404e50] px-1 py-1 mt-1 rounded-lg border-solid border-2 border-[#bdd5d9]"><img src="../images/linkedin.png" className="w-8"></img></button></a>
+          <a href="https://github.com/guumuller" target="_blank"><button className="bg-[#516264] hover:bg-[#404e50] px-2 py-2 mt-1 rounded-lg border-solid border-2 border-[#bdd5d9]"><img src="/github.png" className="w-6"></img></button></a>
+          <a href="https://www.linkedin.com/in/gustavo-m%C3%BCller-leonini-machado-aaa542264/" target="_blank"><button className="bg-[#516264] hover:bg-[#404e50] px-1 py-1 mt-1 rounded-lg border-solid border-2 border-[#bdd5d9]"><img src="/linkedin.png" className="w-8"></img></button></a>
         </div>
         <Nav />
         <hr></hr>
