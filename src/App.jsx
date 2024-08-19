@@ -9,7 +9,7 @@ import Skills from './components/Skills'
 function App() {
 
   return (
-    <div className="no-scrollbar px-4 overflow-x-auto overflow-y-auto absolute top-0 z-[-2] h-screen w-screen bg-gradient-to-t from-zinc-700 to-zinc-950">
+    <div className="no-scrollbar px-4 overflow-x-auto overflow-y-auto absolute top-0 z-[-2] h-screen w-screen bg-gradient-to-t from-zinc-700 to-zinc-950 !scroll-smooth">
       <main className="max-w-3xl mx-auto py-8 flex flex-col gap-8">
         <Header />
         <div className="flex flex-row-reverse items-center gap-4">
