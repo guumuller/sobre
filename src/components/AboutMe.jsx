@@ -2,8 +2,8 @@ function AboutMe() {
     return (
         <section>
             <h1 className="text-[#516264] text-xl">About Me</h1>
-            <p className="text-[#c7dbde]">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+            <p className="text-[#c7dbde]">
+                Hello, my name is Gustavo Müller, and I am a Software Developer. I have extensive academic activities, both individual and group-based. I am very dedicated to studying the field and completing challenges, whether they are personal or work-related. My experience includes developing websites, configuring, and testing applications in my current role at GBX Brasil. I value good communication, strong relationships with colleagues, total dedication to achieving my goals, and a lifelong commitment to studying technology.
             </p>
         </section>
     )
