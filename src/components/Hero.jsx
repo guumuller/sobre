@@ -1,64 +1,58 @@
 import { motion } from "framer-motion";
-import { FaReact, FaCss3Alt, FaAndroid, FaApple } from "react-icons/fa";
-import { SiTypescript, SiFirebase, SiTailwindcss } from "react-icons/si";
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTypescript, SiPostgresql, SiExpress, SiTailwindcss } from "react-icons/si";
 
 const Hero = () => (
-  <section className="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-200 px-4">
+  <section className="flex flex-col justify-center items-center text-gray-200 px-6 py-32 relative z-10">
+
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="mb-6 px-5 py-2 rounded-full border border-gray-700 text-sm text-gray-400 tracking-widest uppercase backdrop-blur-sm"
+    >
+      Full Stack Developer
+    </motion.div>
+
     <motion.h1
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="text-5xl font-bold text-center max-w-3xl bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500"
+      className="text-5xl md:text-7xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500"
     >
-      Hi, I'm a Software Developer
+      Gustavo Müller
     </motion.h1>
 
     <motion.p
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="mt-4 text-xl text-center max-w-2xl text-gray-400"
+      className="mt-4 text-lg md:text-2xl text-center text-gray-400 max-w-2xl"
     >
-      Web and Mobile
+      Building modern and performant experiences for Web and Mobile.
     </motion.p>
 
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1, delay: 1 }}
-      className="mt-8 text-center"
+      className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl"
     >
-      <h2 className="text-2xl font-bold mb-4 text-gray-400">
-        Skills & Technologies
-      </h2>
-      <div className="flex flex-wrap justify-center items-center gap-6 text-6xl">
-        <div className="flex flex-col items-center text-blue-500">
-          <FaReact />
-          <p className="text-sm text-gray-300 mt-2">React</p>
-        </div>
-        <div className="flex flex-col items-center text-blue-400">
-          <SiTypescript />
-          <p className="text-sm text-gray-300 mt-2">TypeScript</p>
-        </div>
-        <div className="flex flex-col items-center text-yellow-500">
-          <SiFirebase />
-          <p className="text-sm text-gray-300 mt-2">Firebase</p>
-        </div>
-        <div className="flex flex-col items-center text-gray-400">
-          <FaApple />
-          <p className="text-sm text-gray-300 mt-2">iOS</p>
-        </div>
-        <div className="flex flex-col items-center text-green-500">
-          <FaAndroid />
-          <p className="text-sm text-gray-300 mt-2">Android</p>
-        </div>
-        <div className="flex flex-col items-center text-cyan-400">
-          <SiTailwindcss />
-          <p className="text-sm text-gray-300 mt-2">Tailwind CSS</p>
-        </div>
-      </div>
+      <TechCard icon={<FaReact />} label="React" color="text-cyan-400" />
+      <TechCard icon={<SiTypescript />} label="TypeScript" color="text-blue-400" />
+      <TechCard icon={<FaNodeJs />} label="Node.js" color="text-green-400" />
+      <TechCard icon={<SiPostgresql />} label="PostgreSQL" color="text-blue-300" />
+      <TechCard icon={<SiExpress />} label="Express" color="text-gray-500" />
+      <TechCard icon={<SiTailwindcss />} label="Tailwind CSS" color="text-sky-500" />
     </motion.div>
   </section>
+);
+
+const TechCard = ({ icon, label, color }) => (
+  <div className="flex flex-col items-center justify-center gap-3 p-6 rounded-xl bg-gray-800/30 backdrop-blur-lg border border-gray-700 hover:scale-105 transition-transform duration-300 shadow-lg">
+    <div className={`text-5xl ${color}`}>{icon}</div>
+    <p className="text-sm text-gray-300 tracking-wide">{label}</p>
+  </div>
 );
 
 export default Hero;

@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import { FaGraduationCap, FaLaptopCode, FaHandshake, FaCertificate } from "react-icons/fa";
 
 const About = () => (
-  <section className="py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-200 px-6">
+  <section className="flex flex-col justify-center items-center text-gray-200 px-6 py-32 relative z-10">
+
     <motion.h2
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500"
+      transition={{ duration: 1 }}
+      className="text-5xl md:text-6xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 mb-12"
     >
       About Me
     </motion.h2>
@@ -16,83 +17,69 @@ const About = () => (
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.2 }}
-      className="max-w-4xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-xl p-8"
+      className="grid gap-10 max-w-5xl w-full"
     >
-      <div className="flex flex-col gap-10">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex items-start gap-6"
-        >
-          <FaLaptopCode className="text-blue-400 text-8xl sm:text-6xl" />
-          <p className="text-lg leading-relaxed">
-            I am a passionate Software Developer with a strong dedication to learning and overcoming challenges, both personally and professionally. My career is marked by extensive academic activities, including individual and group-based projects, where I constantly strive to excel and deepen my understanding of technology.
-          </p>
-        </motion.div>
+      <AboutCard
+        icon={<FaLaptopCode />}
+        color="text-blue-400"
+        delay={0.3}
+        text="I am a passionate Software Developer with a strong dedication to learning and overcoming challenges, both personally and professionally..."
+      />
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex items-start gap-6"
-        >
-          <FaHandshake className="text-green-400 text-8xl sm:text-6xl" />
-          <p className="text-lg leading-relaxed">
-            Currently, I specialize in mobile development focused on digital banking solutions and also work on creating landing pages at GBX Brasil. My role involves designing, developing, and refining applications that provide seamless user experiences, as well as contributing to the innovation of financial technology.
-          </p>
-        </motion.div>
+      <AboutCard
+        icon={<FaHandshake />}
+        color="text-green-400"
+        delay={0.5}
+        text="Currently, I specialize in mobile development focused on digital banking solutions and also work on creating landing pages at GBX Brasil..."
+      />
 
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="flex items-start gap-6"
-        >
-          <FaCertificate className="text-yellow-400 text-8xl sm:text-6xl" />
-          <p className="text-lg leading-relaxed">
-            With experience in building websites, configuring, and testing applications, I bring a versatile skill set to my work. I believe in fostering open communication and building strong professional relationships with colleagues, as these are key to achieving shared goals.
-          </p>
-        </motion.div>
+      <AboutCard
+        icon={<FaCertificate />}
+        color="text-yellow-400"
+        delay={0.7}
+        text="With experience in building websites, configuring, and testing applications, I bring a versatile skill set to my work..."
+      />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="mt-10"
-        >
-          <h3 className="text-2xl font-semibold mb-6 text-center text-gray-300">
-            Education
-          </h3>
-          <div className="flex flex-col gap-10">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="flex items-start gap-6"
-            >
-              <FaGraduationCap className="text-red-400 text-8xl sm:text-6xl" />
-              <p className="text-lg leading-relaxed">
-                I graduated from <strong>Senac Distrito Criativo</strong>, where I had my first contact with the world of technology through a technical programming course integrated with my high school education. Currently, I am pursuing a degree in <strong>Systems Analysis and Development</strong> at <strong>Centro Universitário Senac</strong>.
-              </p>
-            </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.9 }}
+        className="mt-10"
+      >
+        <h3 className="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500">
+          Education
+        </h3>
 
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="flex items-start gap-6"
-            >
-              <FaCertificate className="text-purple-400 text-8xl sm:text-6xl" />
-              <p className="text-lg leading-relaxed">
-                I participated in the <strong>Geração Caldeira 2024 program</strong>, promoted by <strong>Instituto Caldeira</strong>, where I earned <strong>10 certificates of completion</strong> on the Alura platform in various fields, solidifying my knowledge in different languages, tools, and development methodologies.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
+        <div className="grid gap-10">
+          <AboutCard
+            icon={<FaGraduationCap />}
+            color="text-red-400"
+            delay={1}
+            text="I graduated from Senac Distrito Criativo, where I had my first contact with the world of technology through a technical programming course..."
+          />
+
+          <AboutCard
+            icon={<FaCertificate />}
+            color="text-purple-400"
+            delay={1.2}
+            text="I participated in the Geração Caldeira 2024 program, promoted by Instituto Caldeira, where I earned 10 certificates of completion on the Alura platform..."
+          />
+        </div>
+      </motion.div>
     </motion.div>
   </section>
+);
+
+const AboutCard = ({ icon, color, text, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay }}
+    className="flex items-start gap-6 p-6 rounded-xl bg-gray-800/30 backdrop-blur-lg border border-gray-700 hover:scale-[1.02] transition-transform duration-300 shadow-lg"
+  >
+    <div className={`text-6xl md:text-7xl ${color}`}>{icon}</div>
+    <p className="text-lg text-gray-300 leading-relaxed">{text}</p>
+  </motion.div>
 );
 
 export default About;
